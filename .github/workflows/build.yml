@@ -8,7 +8,7 @@ jobs:
       - name: Setup PlatformIO
         run: pip install -U platformio
       - name: Build Firmware
-        run: pio run -d.
+        run: pio run -d src/  # If this fails, change this line to: run: pio run
       - name: Upload Binary
         uses: actions/upload-artifact@v4
         with:
